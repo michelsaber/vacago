@@ -5,11 +5,13 @@ import Button from 'react-bootstrap/Button';
 import Image from 'react-bootstrap/Image';
 import Card from 'react-bootstrap/Card';
 import homeImage from "../images/homeImage.jpg"
+import supp from "../images/supp.png"
+import guide from "../images/guide.jpg"
 
 function Main() {
   return (
     <Container>
-      <Row className='py-4'>
+      <Row className='row align-items-center py-4'>
         <Col sm={7} >
             <Image src={homeImage}  fluid rounded alt=""/>
         </Col>
@@ -21,6 +23,27 @@ function Main() {
       <Card>
       <Card.Body className='bg-dark text-white text-center' >Embark on a journey where we believe every escape deserves the best, and your extraordinary vacation starts with us.</Card.Body>
     </Card>
+    <Row className='row align-items-center py-4'>
+        <Col sm={6} >
+            <h2 className="text-gray text-center ">Meet the team</h2>
+            <p className='text-gray font-italic '>Meet our passionate touristic guides, the heart and soul of your immersive journey. With a wealth of knowledge and a genuine love for the destinations they unveil, our guides transform your exploration into an insightful adventure, creating unforgettable memories at every turn.</p>   
+        </Col>
+        <Col sm={6} >
+        <Image src={guide}  fluid rounded alt=""/>  
+        </Col>
+      </Row>
+      <Card>
+      <Card.Body className='bg-dark text-white text-center' >Step into an odyssey where we stand firm in our belief that every retreat should be nothing short of extraordinary, and your exceptional journey unfolds in our hands.</Card.Body>
+    </Card>
+      <Row className='row align-items-center py-4'>
+        <Col sm={6} >
+            <Image src={supp}  fluid rounded alt=""/> 
+        </Col>
+        <Col sm={6} >
+        <p className='font-italic'>Our dedicated team is committed to turning your dream vacation into a seamless reality, providing unparalleled support every step of the way. From expert guidance to personalized assistance, we are here to ensure your getaway is not only memorable but effortlessly extraordinary.</p>
+            
+        </Col>
+      </Row>
     </Container>
   );
 }
