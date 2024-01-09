@@ -8,6 +8,7 @@ function App() {
     <div className="App">
       <NaviBar></NaviBar>
       <Main></Main>
+      <footer className="bg-dark py-4 "><p className="text-white text-center">Copyright &copy; Vacago</p></footer>
     </div>
   );
 }
