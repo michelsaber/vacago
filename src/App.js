@@ -5,7 +5,7 @@ import Main from "./components/Main"
 
 function App() {
   return (
-    <div className="App">
+    <div className="bg-light">
       <NaviBar></NaviBar>
       <Main></Main>
       <footer className="bg-dark py-4 "><p className="text-white text-center">Copyright &copy; Vacago</p></footer>
