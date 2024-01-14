@@ -8,8 +8,10 @@ import homeImage from "../images/homeImage.jpg"
 import supp from "../images/supp.png"
 import guide from "../images/guide.jpg"
 import contactImg from "../images/contactImg.jpg"
+import { useRef } from 'react';
 
 function Main() {
+  const contactInfo = useRef(null)
   return (
     <Container>
       <Row className='row align-items-center py-4' id="home">
@@ -18,7 +20,7 @@ function Main() {
         </Col>
         <Col sm={5} >
             <p >Indulge your senses in the allure of sun-kissed sands and gentle waves. Our slice of paradise invites you to escape the ordinary and embrace the extraordinary. Immerse yourself in the tranquil beauty of our beach haven, where every moment is a promise of relaxation and pure bliss. Your dream vacation begins here.</p>
-        <Button variant='outline-primary'>Contact</Button>
+        <Button variant='outline-primary' onClick={() => contactInfo.current.scrollIntoView()}>Contact</Button>
         </Col>
       </Row>
       <Card>
@@ -52,7 +54,7 @@ function Main() {
     </Card>
     <Row className='row align-items-center py-4' id="contactus">
         <Col sm={6} >
-            <h2 className="text-gray text-center fs-1 fw-bold">Contact us</h2>
+            <h2 className="text-gray text-center fs-1 fw-bold" ref={contactInfo}>Contact us</h2>
             <p className=' py-4 text-gray text-center '>Contact us on +4900000000 to have full advisory services and get to know the weekly promotions and discounts. Live life to the fullest.</p>   
         </Col>
         <Col sm={6} >
